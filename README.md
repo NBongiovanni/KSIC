@@ -2,10 +2,6 @@
 Koopman system identification and control with visual data
 This version works only for the planar quadrotor system.
 
-## do-mpc Sandbox
-Ce dossier contient des scripts exploratoires (« sandbox ») pour tester des fonctionnalités spécifiques de la bibliothèque do-mpc.  
-Ces fichiers ne font pas partie du workflow CI/CD ni du packaging.
-
 ## How to launch a learning of a model:
 - run : python3 train.py --config <name_json_file>
 - results and models will be recorded in the directory results
