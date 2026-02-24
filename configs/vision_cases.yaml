@@ -1,0 +1,76 @@
+cases:
+  "19":
+    stamp: "bilin_2_2026-02-10_17-03-40"
+    epoch: 310
+    run_status: "final"
+    control_config: "bilinear_eight_19"
+    geom_losses: true
+    dynamics: linear
+    drone_dim: 2
+    dt: 0.05
+    open_loop_simulations:
+      setpoint_tracking: "..."
+      trajectory_tracking: "..."
+    closed_loop_simulations:
+      setpoint_tracking: "..."
+      trajectory_tracking: "..."
+  "20":
+    stamp: "lin_2_2026-02-10_17-03-39"
+    epoch: 300
+    run_status: "final"
+    control_config: "linear_20"
+    dynamics: linear
+    geom_losses: true
+    drone_dim: 2
+    dt: 0.05
+    open_loop_simulations:
+      setpoint_tracking: "..."
+      trajectory_tracking: "..."
+    closed_loop_simulations:
+      setpoint_tracking: "..."
+      trajectory_tracking: "..."
+  "21":
+    stamp: "bilin_6_2026-02-16_13-28-57"
+    epoch: 300
+    run_status: "final"
+    control_config: "bilinear_eight_21"
+    dynamics: bilinear
+    geom_losses: true
+    drone_dim: 2
+    dt: 0.05
+    open_loop_simulations:
+      setpoint_tracking: "..."
+      trajectory_tracking: "..."
+    closed_loop_simulations:
+      setpoint_tracking: "..."
+      trajectory_tracking: "..."
+  "40":
+    stamp: "lin_1_2026-02-24_10-26-38"
+    epoch: 50
+    run_status: "interim"
+    control_config: "linear"
+    dynamics: "linear"
+    geom_losses: true
+    drone_dim: 3
+    dt: 0.01
+    open_loop_simulations:
+      setpoint_tracking: "..."
+      trajectory_tracking: "..."
+    closed_loop_simulations:
+      setpoint_tracking: "..."
+      trajectory_tracking: "..."
+  "41":
+    stamp: "lin_2_2026-02-24_10-27-12"
+    epoch: 50
+    run_status: "interim"
+    control_config: "linear"
+    dynamics: "linear"
+    geom_losses: false
+    drone_dim: 3
+    dt: 0.01
+    open_loop_simulations:
+      setpoint_tracking: "..."
+      trajectory_tracking: "..."
+    closed_loop_simulations:
+      setpoint_tracking: "..."
+      trajectory_tracking: "..."

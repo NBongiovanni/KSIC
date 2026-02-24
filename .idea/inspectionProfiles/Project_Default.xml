@@ -1,0 +1,26 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="torch" />
+          <option value="scipy" />
+          <option value="tqdm" />
+          <option value="do-mpc" />
+          <option value="numpy" />
+          <option value="scikit-learn" />
+          <option value="matplotlib" />
+          <option value="casadi" />
+          <option value="torchinfo" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="ERRORS_ATTRIBUTES" />
+    <inspection_tool class="PyUnusedLocalInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" editorAttributes="NOT_USED_ELEMENT_ATTRIBUTES">
+      <option name="ignoreTupleUnpacking" value="false" />
+      <option name="ignoreLambdaParameters" value="false" />
+      <option name="ignoreLoopIterationVariables" value="false" />
+    </inspection_tool>
+  </profile>
+</component>

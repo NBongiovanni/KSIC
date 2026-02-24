@@ -1,0 +1,39 @@
+modality: "vision"
+dt: 0.05
+num_steps_simulation: 75
+num_steps_horizon: 10
+x_init:
+  0: {value: 0, rand: false, min: -0.25, max: 0.25}
+  1: {value: 0, rand: false, min: -0.25, max: 0.25}
+  2: {value: 0, rand: false}
+  3: {value: 0, rand: false}
+  4: {value: 0, rand: false}
+  5: {value: 0, rand: false}
+num_simulations: 1
+render: true
+plot: true
+
+constraints:
+  use_inputs_constraints: false
+  force_limits: [7, 13]
+  torque_limits: [-1.8, 1.8]
+
+x_ref:
+  specs:
+     0: { type: sine, amplitude: 0.4, freq_hz: 0.4, phase: 0 }
+     1: { type: sine_cosine, amplitude: 0.4, freq_hz: 0.2, phase: 0 }
+
+cost:
+  R: [0.001, 0.001]
+  S: [0.05, 0.05]
+  Qz: 10
+  only_position: false
+  Pz: 10
+
+solver_options:
+  nlp_solver_type: "SQP_RTI"
+  qp_solver_iter_max: 100
+  qp_tol: 1.0e-8
+  qp_warm_start: true
+  regularization: 1.0e-8
+  print_level: 0

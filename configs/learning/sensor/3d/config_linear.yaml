@@ -1,0 +1,59 @@
+model_params:
+  drone: { dim: 3, mass: 0.027, inertia: 0.001 }
+  z_dynamics:
+    model: "linear"
+    z_dim: 18
+    u_dim: 4
+    structured_AB: true
+    affine_term: false
+  dt: 0.01
+  dim_hidden_layers: 128
+  num_hidden_layers: 1
+  activation: "tanh"
+
+training_params:
+  num_epochs: 1400
+  checkpoint_every: 10
+  loss_weights: { pred_x: 1, pred_z: 1, rec: 10 }
+  optimizer:
+    l2_reg: 0.00001
+    lr: 0.0012
+  lr_decay: 0.996
+  pruning:
+    enabled: false
+    every_n_epochs: 1
+    start_epoch: 200
+    threshold: 0.000001
+
+dataset_params:
+  dataset_version: 4
+  batch_size: 64
+  train:
+    num_steps_loaded: 200
+    num_steps_pred: 20
+    shuffle: true
+    drop_last: true
+
+  val_datasets:
+    - name: "short_horizon"
+      num_steps_loaded: 200
+      num_steps_pred: 20
+      shuffle: true
+      drop_last: true
+
+    - name: "long_horizon"
+      num_steps_loaded: 150
+      num_steps_pred: 150
+      shuffle: false
+      drop_last: false
+
+  decimation_factor: 10
+  scaler:
+    scale_x: true
+    scale_u: true
+    center: true
+    mean_x: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    mean_u: [0.26487, 0, 0, 0]
+  num_workers: 2
+  delay: 0
+

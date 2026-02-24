@@ -1,0 +1,61 @@
+model_params:
+  drone: {dim: 3, mass: 0.027, inertia: 0.15}
+  z_dynamics:
+    model: "linear"
+    structured_AB: true
+    affine_term: false
+    z_dim: 20
+  dt: 0.01
+  auto_encoder:
+    CNN: {out_planes: [28, 48, 64, 48, 28], strides: [2, 2, 2, 2, 2]}
+    MLP: {num_hidden_layers: 1, dim_hidden: 192}
+    activation: "relu"
+
+training_params:
+  drone_dim: 3
+  num_epochs: 1200
+  checkpoint_every: 10
+  loss_weights: {y_pred: 250.0, y_rec: 40.0, z: 5.0, c: 0.0, a: 0.0}
+  bilin_reg: false
+  optimizer:
+    lr:
+      ab: 0.001
+      ae: 0.001
+    weight_decay: {ae: 8.0e-05, ab: 8.0e-05}
+  lr_decay: 0.996
+  curriculum:
+    phase_epoch_triggers: [ 2, 75, 100 ]
+    ramp_duration: 10
+
+dataset_params:
+  dataset_version: 6
+  batch_size: 32
+  resolution: 128
+  train:
+    num_steps_loaded: 301
+    num_steps_pred: 50
+    shuffle: true
+    drop_last: true
+
+  val_datasets:
+    - name: "short_horizon"
+      num_steps_loaded: 301
+      num_steps_pred: 50
+      shuffle: true
+      drop_last: true
+
+    - name: "long_horizon"
+      num_steps_loaded: 301
+      num_steps_pred: 50
+      shuffle: true
+      drop_last: true
+
+  decimation_factor: 1
+  scaler:
+    scale_x: false
+    scale_u: true
+    center: true
+    mean_x: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    mean_u: [0.27486, 0, 0, 0]
+  num_workers: 2
+  delay: 1

@@ -1,0 +1,14 @@
+im_size: 512
+resolution: 128
+dim: 3
+dataset_version: 4
+n_steps_loaded: 81
+n_val_datasets: 1
+dt: 0.05
+batch_size: 32
+delay: 0
+
+n_steps: 20
+n_traj:
+  train: 50  # max = 4000
+  val: [50,]
