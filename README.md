@@ -23,9 +23,9 @@ The model architecture consists of:
 
 CNN + MLP mapping image observations to a latent state `z`.
 
-2. **Linear Koopman dynamics**
+2. **Koopman dynamics**
 
-Linear evolution of the latent state.
+Evolution of the latent state.
 
 3. **Decoder**
 
