@@ -65,20 +65,30 @@ All experiment parameters are defined in configuration files (`.yaml`).
 
 Type of dynamics model used in the latent space.
 
-Example:
+Two options are currently available:
 
-```
---dynamics linear
-```
+| Value | Model |
+|------|------|
+| `linear` | Linear Koopman dynamics |
+| `bilinear` | Bilinear Koopman dynamics |
 
-This corresponds to the Koopman model:
+### `linear`
+
+The latent dynamics follow:
 
 ```
 z_{k+1} = A z_k + B u_k
 ```
 
----
+### `bilinear`
 
+The latent dynamics include an additional bilinear interaction between the latent state and the control:
+
+```
+z_{k+1} = A z_k + B u_k + \sum_i u_i N_i z_k
+```
+
+where `A`, `B`, and `N_i` are learned matrices.
 ## `--mode`
 
 Defines the input modality used for training.
