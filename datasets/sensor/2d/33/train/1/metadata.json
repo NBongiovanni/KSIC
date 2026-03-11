@@ -1,0 +1,10 @@
+{
+"datasetType":"train_1",
+"dt":0.01,
+"lenSequ":5,
+"nTrajs":6000,
+"noise":false,
+"downsample":5,
+"smoothing":true,
+"dateGenerated":"05-Feb-2026 11:38:25"
+}

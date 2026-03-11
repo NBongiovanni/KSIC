@@ -1,0 +1,10 @@
+{
+"datasetType":"val",
+"dt":0.01,
+"lenSequ":5,
+"nTrajs":200,
+"noise":false,
+"downsample":5,
+"smoothing":true,
+"dateGenerated":"05-Feb-2026 11:38:27"
+}
