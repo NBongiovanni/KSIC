@@ -92,7 +92,7 @@ Possible values:
 | Mode | Description |
 |-----|-----|
 | `vision` | Learning from image observations |
-| `sensors` | Learning from physical state measurements |
+| `sensor` | Learning from physical state measurements |
 
 ---
 
@@ -111,18 +111,6 @@ Example:
 ## `--id`
 
 Identifier of the configuration file used for the experiment.
-
-Example:
-
-```
---id 1
-```
-
-This loads the configuration file:
-
-```
-configs/.../config_1.yaml
-```
 
 ---
 
