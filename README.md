@@ -11,12 +11,6 @@ The current implementation focuses on the **planar quadrotor system**, but the f
 
 The objective of this project is to learn a **Koopman representation of the system dynamics directly from visual observations**.
 
-The learned model follows the linear latent dynamics:
-
-```
-z_{k+1} = A z_k + B u_k
-```
-
 where
 
 - `z` is the latent observable state
