@@ -1,4 +1,4 @@
-# KSIC_v8
+# KSIC
 Koopman system identification and control with visual data
 This version works only for the planar quadrotor system.
 
