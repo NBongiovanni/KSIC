@@ -3,7 +3,7 @@ Koopman system identification and control with visual data
 This version works only for the planar quadrotor system.
 
 ## How to launch a learning of a model:
-- run : python3 train.py --config <name_json_file>
+- run : python3 run_train_vision_model.py --dynamics linear --mode vision --seed 1 --id 1 --geom_losses --drone_dim 2 
 - results and models will be recorded in the directory results
 - configuration defined in the configuration file (.json)
 

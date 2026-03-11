@@ -32,20 +32,20 @@ dataset_params:
   resolution: 128
   train:
     num_steps_loaded: 81
-    num_steps_pred: 10
+    num_steps_pred: 20
     shuffle: true
     drop_last: true
 
   val_datasets:
     - name: "short_horizon"
       num_steps_loaded: 81
-      num_steps_pred: 10
+      num_steps_pred: 20
       shuffle: true
       drop_last: true
 
     - name: "long_horizon"
       num_steps_loaded: 81
-      num_steps_pred: 10
+      num_steps_pred: 20
       shuffle: true
       drop_last: true
 

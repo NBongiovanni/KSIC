@@ -12,7 +12,7 @@ train:
 
 val_datasets:
   - name: "short_horizon"
-    num_trajs: 200
+    num_trajs: 100
     num_steps_loaded: 81
     num_steps_pred: 20
 

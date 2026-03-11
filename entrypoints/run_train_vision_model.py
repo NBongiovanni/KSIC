@@ -5,11 +5,7 @@ import matplotlib
 matplotlib.use("Agg")
 
 from KSIC import utils
-from KSIC.model_learning import (
-    VisionTrainer,
-    prepare_training_from_scratch,
-    define_seeds,
-)
+from KSIC.model_learning import VisionTrainer, prepare_training_from_scratch, define_seeds
 from KSIC.models import init_vision_koop_model
 from KSIC.data_pipeline import ImageDatasetBuilder, StateInputsDatasetBuilder
 

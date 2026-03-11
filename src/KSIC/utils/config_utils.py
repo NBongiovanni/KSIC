@@ -86,6 +86,7 @@ def process_checkpoint_config(params: dict, paths: RunPaths, seed: int) -> dict:
     model_params["z_dynamics"]["u_dim"] = u_dim
     training_params["dt"] = model_params["dt"]
     dataset_params["dt"] = model_params["dt"]
+    training_params["drone_dim"] = model_params["drone"]["dim"]
 
     training_params["run_dir"] = paths.run_dir
     training_params["log_dir"] = paths.log_dir
