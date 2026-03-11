@@ -46,10 +46,6 @@ To generate a vision dataset from an existing sensor dataset, run:
 python3 run_generate_vision_data.py --drone_dim 2
 ```
 
-If you want to generate a new sensor dataset, you can have to launch the Matlab script dataGeneration.m. 
-The associated config files are configs/defineSysParams.m and configs/defineCtrlParams.m and config/defineDataset.m..
-
-
 ## Step 2 — Generate a new sensor dataset (optional)
 
 If you want to generate a new sensor dataset, run the Matlab script:
