@@ -3,12 +3,12 @@
 import numpy as np
 import torch
 
-from KSIC_v6 import utils
-from KSIC_v6.closed_loop_eval import (
+from KSIC import utils
+from KSIC.closed_loop_eval import (
     StateRenderer,
     compute_pose_features_denorm
 )
-from KSIC_v6.models import load_vision_koop_model_for_eval
+from KSIC.models import load_vision_koop_model_for_eval
 
 STAMP = "2025-09-24_15-44-42"
 EPOCH = 200

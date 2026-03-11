@@ -2,8 +2,8 @@ import multiprocessing
 import matplotlib
 matplotlib.use("Agg")
 
-from KSIC_v6 import utils
-from KSIC_v6.open_loop_eval import (
+from KSIC import utils
+from KSIC.open_loop_eval import (
     extract_one_rollout_vision,
     render_open_loop_rollouts,
     RenderOpenLoopConfig,

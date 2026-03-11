@@ -12,8 +12,8 @@ import matplotlib
 matplotlib.use("Agg")
 
 from dataclasses import dataclass
-from KSIC_v6.closed_loop_eval import ClosedLoopVisualizerMulti
-from KSIC_v6 import utils
+from KSIC.closed_loop_eval import ClosedLoopVisualizerMulti
+from KSIC import utils
 
 # ============================================================================
 # CONFIGURATION
@@ -54,7 +54,7 @@ def main() -> None:
     case_1 = cases[cfg.case_1.id]
     case_2 = cases[cfg.case_2.id]
 
-    output_dir = Path("/home/bongiovanni/Desktop/PycharmProjects/KSIC_v6/outputs")
+    output_dir = Path("/home/bongiovanni/Desktop/PycharmProjects/KSIC/outputs")
     run_dir_1 = output_dir / run_status / "sensor" / f"{case_1.drone_dim}d" / "models" / case_1.stamp
     run_dir_2 = output_dir / run_status / "sensor" / f"{case_2.drone_dim}d" / "models" / case_2.stamp
 

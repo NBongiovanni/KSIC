@@ -2,14 +2,14 @@
 import matplotlib
 matplotlib.use("Agg")
 
-from KSIC_v6 import utils
-from KSIC_v6.data_pipeline import (
+from KSIC import utils
+from KSIC.data_pipeline import (
     ImDatasetGenerator,
     StateInputsDatasetLoader,
     ImageProcessorMmap,
     DatasetParams
 )
-from KSIC_v6.utils import find_project_root
+from KSIC.utils import find_project_root
 
 def main() -> None:
     args = utils.build_arg_parser_data_generation().parse_args()

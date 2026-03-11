@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from pathlib import Path
 
-from KSIC_v6 import utils
-from KSIC_v6.open_loop_eval import SensorStateRolloutPlotterMulti, VisionStateRolloutPlotterMulti
+from KSIC import utils
+from KSIC.open_loop_eval import SensorStateRolloutPlotterMulti, VisionStateRolloutPlotterMulti
 
 import matplotlib
 matplotlib.use("Agg")
@@ -48,7 +48,7 @@ def main() -> None:
     case_2 = cases[cfg.case_2.id]
     run_status = "final"
 
-    output_dir = Path("/home/bongiovanni/Desktop/PycharmProjects/KSIC_v6/outputs")
+    output_dir = Path("/home/bongiovanni/Desktop/PycharmProjects/KSIC/outputs")
     base_run_dir_1 = output_dir / run_status / "sensor" / f"{case_1.drone_dim}d" / "models" / case_1.stamp
     base_run_dir_2 = output_dir / run_status / "sensor" / f"{case_2.drone_dim}d" / "models" / case_2.stamp
 

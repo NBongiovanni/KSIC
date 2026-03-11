@@ -13,14 +13,14 @@ import matplotlib
 matplotlib.use("Agg")
 import numpy as np
 
-from KSIC_v6 import utils
-from KSIC_v6.closed_loop_eval import (
+from KSIC import utils
+from KSIC.closed_loop_eval import (
     prepare_for_closed_loop_eval,
     redirect_output_to_file,
     run_closed_loop_simulations,
     run_closed_loop_visualization
 )
-from KSIC_v6.utils.cases_loader import load_cases
+from KSIC.utils.cases_loader import load_cases
 
 # ============================================================================
 # CONFIGURATION

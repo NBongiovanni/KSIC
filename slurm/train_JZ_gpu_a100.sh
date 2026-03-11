@@ -19,7 +19,7 @@ module purge
 module load pytorch-gpu/py3/2.5.0    # <-- si c'est bien le module que tu utilises d'habitude
 
 # Force tes imports à pointer vers ton code (évite les vieux installs)
-export PYTHONPATH=$HOME/KSIC_v6/src:$WORK${PYTHONPATH:+:$PYTHONPATH}
+export PYTHONPATH=$HOME/KSIC/src:$WORK${PYTHONPATH:+:$PYTHONPATH}
 
 # (optionnel mais utile en debug)
 echo "PYTHONPATH=$PYTHONPATH"
@@ -29,9 +29,9 @@ python -c "import torch; print('torch', torch.__version__, 'cuda', torch.cuda.is
 
 # ---- choix du script Python (vision vs sensor) ----
 if [[ "$*" == *"--mode sensor"* ]]; then
-  ENTRYPOINT="$HOME/KSIC_v6/entrypoints/run_train_sensor_model.py"
+  ENTRYPOINT="$HOME/KSIC/entrypoints/run_train_sensor_model.py"
 else
-  ENTRYPOINT="$HOME/KSIC_v6/entrypoints/run_train_vision_model.py"
+  ENTRYPOINT="$HOME/KSIC/entrypoints/run_train_vision_model.py"
 fi
 
 echo "Entry point: ${ENTRYPOINT}"

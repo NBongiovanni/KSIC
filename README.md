@@ -9,6 +9,6 @@ This version works only for the planar quadrotor system.
 
 ## Main parameters to be set in the config file
 - z_dim: the dimension of the observable space
-- alphas: weights of the components of the losses, in the order: less_rec, loss_pred, loss_dim
+- alphas: weights of the components of the losses, in the order: loss_rec, loss_pred, loss_dim
 - n_epoch: number of epochs of the training,
 - name_dataset: name of the dataset to be used,

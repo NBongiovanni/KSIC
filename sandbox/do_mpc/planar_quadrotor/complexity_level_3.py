@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import do_mpc
 import pdb
 
-from KSIC_v6.closed_loop_eval import NonLinearPlanarQuadrotor
+from KSIC.closed_loop_eval import NonLinearPlanarQuadrotor
 
 """
 Basic script implementing a control algorithm with the do-mpc library.

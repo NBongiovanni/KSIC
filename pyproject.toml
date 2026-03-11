@@ -3,7 +3,7 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "KSIC_v6"
+name = "KSIC"
 version = "1.0.0"
 description = "System identification and control using Koopman representations of a planar quadrotor (with sensor data or visual data)."
 readme = "README.md"
@@ -25,7 +25,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/NBongiovanni/KSIC_v6.git"
+Homepage = "https://github.com/NBongiovanni/KSIC.git"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -34,4 +34,4 @@ where = ["src"]
 "*" = ["*"]
 
 [project.scripts]
-myproj-train = "KSIC_v6.main:cli"
+myproj-train = "KSIC.main:cli"

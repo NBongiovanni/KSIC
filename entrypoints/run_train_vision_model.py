@@ -4,14 +4,14 @@ import joblib
 import matplotlib
 matplotlib.use("Agg")
 
-from KSIC_v6 import utils
-from KSIC_v6.model_learning import (
+from KSIC import utils
+from KSIC.model_learning import (
     VisionTrainer,
     prepare_training_from_scratch,
     define_seeds,
 )
-from KSIC_v6.models import init_vision_koop_model
-from KSIC_v6.data_pipeline import ImageDatasetBuilder, StateInputsDatasetBuilder
+from KSIC.models import init_vision_koop_model
+from KSIC.data_pipeline import ImageDatasetBuilder, StateInputsDatasetBuilder
 
 MODALITY = "vision"
 
