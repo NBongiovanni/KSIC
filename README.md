@@ -66,23 +66,6 @@ Two options are currently available:
 | `linear` | Linear Koopman dynamics |
 | `bilinear` | Bilinear Koopman dynamics |
 
-### `linear`
-
-The latent dynamics follow:
-
-```
-z_{k+1} = A z_k + B u_k
-```
-
-### `bilinear`
-
-The latent dynamics include an additional bilinear interaction between the latent state and the control:
-
-```
-z_{k+1} = A z_k + B u_k + \sum_i u_i N_i z_k
-```
-
-where `A`, `B`, and `N_i` are learned matrices.
 ## `--mode`
 
 Defines the input modality used for training.
