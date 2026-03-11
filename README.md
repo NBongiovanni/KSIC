@@ -11,12 +11,6 @@ The current implementation focuses on the **planar quadrotor system**, but the f
 
 The objective of this project is to learn a **Koopman representation of the system dynamics directly from visual observations**.
 
-where
-
-- `z` is the latent observable state
-- `u` is the control input
-- `A` and `B` are learned matrices
-
 The model architecture consists of:
 
 1. **Encoder**
@@ -32,6 +26,48 @@ Evolution of the latent state.
 MLP + transposed CNN reconstructing the image observations.
 
 ---
+
+# Generating a dataset
+
+The training pipeline relies on two types of datasets:
+
+1. **Sensor datasets** (state and control trajectories)
+2. **Vision datasets** (images generated from the sensor data)
+
+The vision dataset is generated from the sensor dataset.
+
+---
+
+## Step 1 — Generate a vision dataset
+
+To generate a vision dataset from an existing sensor dataset, run:
+
+```bash
+python3 run_generate_vision_data.py --drone_dim 2
+```
+
+If you want to generate a new sensor dataset, you can have to launch the Matlab script dataGeneration.m. 
+The associated config files are configs/defineSysParams.m and configs/defineCtrlParams.m and config/defineDataset.m..
+
+
+## Step 2 — Generate a new sensor dataset (optional)
+
+If you want to generate a new sensor dataset, run the Matlab script:
+dataGeneration.m
+
+The Matlab configuration files are located in:
+configs/defineSysParams.m
+configs/defineCtrlParams.m
+configs/defineDataset.m
+
+These files define:
+
+the drone physical parameters
+
+the control inputs used to excite the system
+
+the dataset generation settings
+
 
 # Training a model
 
@@ -135,7 +171,7 @@ dataset_params
 training_params
 model_params
 ```
-
+By default, the dataset used is the version named "33", but it can be changed with the `dataset_version` parameter.
 ---
 
 # Dataset parameters
