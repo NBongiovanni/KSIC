@@ -1,1 +1,0 @@
-# planar_quad_simulator
