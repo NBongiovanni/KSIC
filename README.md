@@ -56,18 +56,14 @@ If you want to generate a new sensor dataset, run the Matlab script:
 dataGeneration.m
 
 The Matlab configuration files are located in:
+
 configs/defineSysParams.m
+
 configs/defineCtrlParams.m
+
 configs/defineDataset.m
 
-These files define:
-
-the drone physical parameters
-
-the control inputs used to excite the system
-
-the dataset generation settings
-
+These files define the drone physical parameters, the control inputs used to excite the system and the dataset generation settings.
 
 # Training a model
 
