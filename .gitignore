@@ -24,3 +24,7 @@ build/
 
 # OS
 .DS_Store
+
+datasets/*
+!datasets/sensor/2d/33
+outputs/*

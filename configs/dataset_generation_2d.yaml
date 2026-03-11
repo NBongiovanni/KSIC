@@ -6,20 +6,20 @@ batch_size: 32
 resolution: 128
 
 train:
-  num_trajs: 100
+  num_trajs: 8000
   num_steps_loaded: 81
-  num_steps_pred: 20
+  num_steps_pred: 10
 
 val_datasets:
   - name: "short_horizon"
-    num_trajs: 100
+    num_trajs: 200
     num_steps_loaded: 81
-    num_steps_pred: 20
+    num_steps_pred: 10
 
   - name: "long_horizon"
     num_trajs: 200
     num_steps_loaded: 81
-    num_steps_pred: 20
+    num_steps_pred: 10
 
 decimation_factor: 1
 scaler:
