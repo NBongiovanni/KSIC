@@ -215,13 +215,13 @@ L = α_rec L_rec + α_pred L_pred + α_dim L_dim
 Each training sample contains:
 
 ```
-(y_t, y_{t+1}, u_t)
+(y_{t-1}, y_{t}, u_t)
 ```
 
 where
 
-- `y_t` : image at time `t`
-- `y_{t+1}` : image at time `t+1`
+- `y_{t-1}` : image at time `t-1`
+- `y_{t}` : image at time `t`
 - `u_t` : control input
 
 The encoder receives the stacked images:
@@ -233,7 +233,7 @@ The encoder receives the stacked images:
 The network encodes the observation into the latent state:
 
 ```
-z_t = encoder(y_t, y_{t+1})
+z_t = encoder(y_{t-1}, y_{t})
 ```
 
 ---
