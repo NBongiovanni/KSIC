@@ -221,57 +221,6 @@ L = α_rec L_rec + α_pred L_pred + α_dim L_dim
 
 ---
 
-## `checkpoint_every`
-
-Frequency (in epochs) at which model checkpoints are saved.
-
----
-
-## `grad_clip_max_norm`
-
-Maximum gradient norm used for gradient clipping during training.
-
----
-
-# Model parameters
-
-## `dt`
-
-Time discretization used for the Koopman dynamics.
-
----
-
-## `z_dynamics.model`
-
-Type of latent dynamics model.
-
-Example:
-
-```
-linear
-```
-
----
-
-## `z_dynamics.z_dim`
-
-Dimension of the latent state `z`.
-
-This parameter controls the size of the Koopman observable space.
-
----
-
-## `z_dynamics.x_dim`
-
-Dimension of the physical state vector.
-
----
-
-## `z_dynamics.u_dim`
-
-Dimension of the control input.
-
----
 
 # Dataset format
 
