@@ -5,6 +5,16 @@ This repository contains the code associated with the paper on learning Koopman 
 
 The current implementation focuses on the **planar quadrotor system**, but the framework is designed to support different drone models and sensing modalities.
 
+> **Maintenance notice**  
+> This repository corresponds to the original codebase associated with the published paper:
+> N. Bongiovanni, B. Mavkov, R. Martins, and G. Allibert, “Identification and Control of a Planar Quadrotor from Visual Data Using Koopman Representations,” in International Conference on Unmanned Aircraft Systems (ICUAS), 2026.
+>
+> This repository is no longer actively maintained and may contain bugs.  
+> For a more advanced, reorganized, and maintained version of the codebase, please refer to:
+>
+> **KoNAMIC:** [https://github.com/...](https://github.com/NBongiovanni/KoNAMIC.git)
+> 
+
 ---
 
 # Overview
